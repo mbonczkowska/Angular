@@ -1,9 +1,16 @@
-﻿<div id="login">
-	<form ng-submit="login()">
-		<input type="text" name="username" placeholder="username" ng-model="credentials.username" required/>
-		<input type="password" name="password" placeholder="password" ng-model="credentials.password" required/>
-		<button type="submit">Log in</button>
+﻿
+<div class="container">
+<div class="jumbotron">
+<h3>Login</h3>
+</div>
+<div id="login" style="width:600px;">
+	<form ng-submit="login()" class="form-signin">
+		<label for="inputUsername" class="sr-only"></label>
+		<input class="form-control" type="text" name="username" placeholder="username" ng-model="credentials.username" required/>
+		<label for="inputPassword" class="sr-only"></label>
+		<input class="form-control" type="password" name="password" placeholder="password" ng-model="credentials.password" required/>
+		<button type="submit" class="btn btn-success">Log in</button>
 	</form>
 </div>
- <script src="../node_modules/angular/angular.js"></script>
-  <script src="/node_modules/angular/angular.js"></script>
+
+</div>

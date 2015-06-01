@@ -1,0 +1,33 @@
+﻿<div class="container">
+
+<div class="jumbotron">
+
+<h3>Home</h3>
+
+</div>
+
+	<h2>Welcome to {{ title }} page</h2>
+	<div>{{message}}</div>
+	<br>
+	<button class="btn btn-large btn-primary" ng-click="logout()">Log out</button>
+	<br><br>
+	<div ng-controller="todoController">
+		
+	  
+		<form name="form" ng-submit="addTodo()">
+			<input type="text" name="newtodo" ng-model="newtodo" required />
+			
+			<button class="btn btn-large btn-success">Add</button>
+		</form>
+		<button class="btn btn-large btn-warning" ng-click="clearComplete()">Clear</button>
+		<ul style="list-style-type: none">
+			<li ng-repeat="todo in todos">
+				<input type="checkbox" ng-model="todo.done" />
+				<!--<span ng-class="{'done': todo.done}">{{todo.title}}</span>-->
+				<todo-list ng-class="{'done': todo.done}" todo="todo"></todo-list>
+			</li>
+			 
+		</ul>
+	</div>
+	
+</div>
